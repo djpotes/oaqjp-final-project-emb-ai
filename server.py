@@ -8,9 +8,7 @@ def emotionDetector():
     if emotion["dominant_emotion"] == "None":
         return "Invalid text! Please try again!" 
     else:
-        return "For the given statement, the system response is 'anger': "+emotion["anger"]+
-        ", 'disgust': "+emotion["disgust"]+", 'fear': "+emotion["fear"]+", 'joy': 
-        "+emotion["joy"]+" and 'sadness': "+emotion["sadness"]+". The dominant emotion is "+emotion["dominant_emotion"]
+        return "For the given statement, the system response is 'anger': "+str(emotion["anger"])+", 'disgust': "+str(emotion["disgust"])+", 'fear': "+str(emotion["fear"])+", 'joy': "+str(emotion["joy"])+" and 'sadness': "+str(emotion["sadness"])+". The dominant emotion is "+str(emotion["dominant_emotion"])
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=False)
